@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business - Ablebiz Business Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #006400;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .business-info, .testimonials, .contact-info {
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .business-info h2, .testimonials h2, .contact-info h2 {
+            margin-top: 0;
+        }
+        .testimonials {
+            background-color: #f9f9f9;
+        }
+        .testimonials p {
+            font-style: italic;
+        }
+        .testimonial {
+            margin-bottom: 10px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+        .carousel {
+            position: relative;
+            max-width: 4.5in;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .carousel img, .carousel .testimonial {
+            width: 4.5in;
+            height: 4.5in;
+            object-fit: cover;
+            display: none;
+            border-radius: 8px;
+        }
+        .carousel img.active, .carousel .testimonial.active {
+            display: block;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ablebiz Business Services</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="business.html">Business Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="logo">
+            <img src="WhatsApp Image 2024-05-27 at 11.39.04 AM.jpeg" alt="Ablebiz Business Services Logo">
+        </div>
+        <div class="business-info">
+            <h2>About Ablebiz Business Services</h2>
+            <p>At Ablebiz Business Services, we transform ideas into legacies. We offer trusted, comprehensive services as a business registration agent, guiding entrepreneurs and businesses through the registration process, ensuring legal compliance and minimizing bureaucratic challenges. From licenses to tax registrations, we provide end-to-end support, saving you time, effort, and resources. Partner with us for a simplified, confident business journey.</p>
+            <p>Our services include the registration of business names, limited liability companies (LLCs), non-governmental organizations (NGOs), and associations. With a deep understanding of legal and administrative requirements, we assist individuals and businesses in successfully establishing their entities. Whether you're a sole proprietor looking to register a business name, a group of individuals seeking to form an LLC, or an organization aiming to establish an NGO, we offer efficient and reliable support throughout the registration process.</p>
+        </div>
+        <div class="carousel">
+            <img src="WhatsApp Image 2024-05-27 at 11.39.01 AM.jpeg" alt="Flier 1" class="active">
+            <img src="WhatsApp Image 2024-05-27 at 11.39.52 AM.jpeg" alt="Flier 2">
+            <img src="WhatsApp Image 2024-05-27 at 11.41.53 AM.jpeg" alt="Flier 3">
+            <img src="WhatsApp Image 2024-05-27 at 11.42.26 AM.jpeg" alt="Flier 4">
+            <img src="WhatsApp Image 2024-05-27 at 11.42.37 AM.jpeg" alt="Flier 5">
+        </div>
+        <div class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="carousel">
+                <div class="testimonial active">
+                    <p>"Keep up the good work." - Ganiat</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Ablebiz made the business registration process so simple and stress-free. Highly recommend!" - John</p>
+                </div>
+                <div class="testimonial">
+                    <p>"The team at Ablebiz is incredibly knowledgeable and supportive. They took care of everything for us." - Oufunke</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Excellent service! Our Company was registered in no time, thanks to Ablebiz." - Johnson</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>For inquiries and more information, reach out to us at:</p>
+            <p>Email: <a href="mailto:info@ablebiz.com">info@ablebiz.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/message/O2KBXPGDJWDBH1">Chat with us</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Ablebiz Business Services. All rights reserved.</p>
+    </footer>
+    <script>
+        let carouselIndex = 0;
+        let carouselItems = document.querySelectorAll('.carousel img, .carousel .testimonial');
+        
+        function showNextCarouselItem() {
+            carouselItems[carouselIndex].classList.remove('active');
+            carouselIndex = (carouselIndex + 1) % carouselItems.length;
+            carouselItems[carouselIndex].classList.add('active');
+        }
+        
+        setInterval(showNextCarouselItem, 3000);
+    </script>
+</body>
+</html>
